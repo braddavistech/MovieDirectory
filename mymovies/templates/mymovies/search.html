@@ -4,9 +4,11 @@
 {% block content %}
 
 <h1 class="user_welcome">All Movies</h1>
+<h3 class="filter_type">Filtered by {{filterType}}</h3>
 <div class="movie_list">
     {% for movie in movies %}
     <div class="indiv_movie">
+        <a class="movie_details_link" href="{% url 'mymovies:details' movie.imdbID%}">
         <img class="main_movie_image" src={{movie.Poster}} alt={{movie.Title}}>
         <p class="main_movie_title">{{ movie.Title }}</p>
         {% if movie.Rated in "R" %}
@@ -39,6 +41,8 @@
             <p class="movie_rating_bad"><img class="rotten_score" src="{% static 'mymovies/imdb.png' %}"
                     alt="IMDB Rank"> {{movie.imdbRating}}</p>
             {% endif %}
+        </a>
+        <a class="movie_details_link" href="{% url 'mymovies:details' movie.imdbID%}"></a>
         </section>
     </div>
     {% endfor %}
