@@ -25,22 +25,6 @@ class Movie(models.Model):
     def __str__(self):
         return self
 
-class Category(models.Model):
-    name = models.TextField(max_length=80)
-    def __str__(self):
-        return self
-
-class CategoryMovie(models.Model):
-    movie = models.ForeignKey(
-        Movie,
-        on_delete=models.DO_NOTHING,
-    )
-    category = models.ForeignKey(
-        Category,
-        on_delete=models.DO_NOTHING,
-    )
-    def __str__(self):
-        return self
 
 
 
