@@ -1,0 +1,16 @@
+{% extends "mymovies/index.html" %}
+
+{% block content %}
+
+<h1 class="check_movie_main">Edit Movie Information</h1>
+<div class="main_form">
+    <img class="movie_full_image" src={{poster}} alt="New Movie">
+    <form class="check_movie_form" action="{% url 'mymovies:save_edits' imdbID %}" method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <input class="add_movie_btn" type="submit" value="Save Changes">
+        <a class="home_link" href="{% url 'mymovies:index' %}">Cancel</a>
+    </form>
+
+</div>
+{% endblock content %}

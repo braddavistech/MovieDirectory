@@ -41,6 +41,7 @@ body {
 }
 
 .movie_list {
+    width: 100%;
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -50,6 +51,8 @@ body {
     max-width: 300px;
     min-width: 250px;
     margin-bottom: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
     border: 2px solid white;
     border-radius: 25px;
     padding: 2px;
@@ -242,6 +245,8 @@ body {
     flex-direction: column;
     width: 90%;
     margin: auto;
+    padding-top: 3vw;
+    padding-bottom: 72vw;
 }
 
 .add_training_form > label {
@@ -259,7 +264,7 @@ body {
 }
 
 .add_movie_btn {
-    width: 30%;
+    width: 260px;
     margin: auto;
     font-size: 25px !important;
     border: 3px solid black;
@@ -278,17 +283,27 @@ body {
 .check_movie_main {
     text-align: center;
     color: white;
+    background-color: rgba(0,0,0,.5);
 }
 
 .main_form {
     display: flex;
+    background-color: rgba(0,0,0,.5);
+    padding-top: 10vw;
+    padding-bottom: 20vw;
 }
 
 .movie_full_image {
     display: flex;
     margin-left: 5%;
-    width: 30%;
+    max-width: 30%;
     max-height: 80vh;
+}
+
+.filter_type {
+    color: white;
+    text-align: center;
+    font-size: 35px;
 }
 
 .check_movie_form {
