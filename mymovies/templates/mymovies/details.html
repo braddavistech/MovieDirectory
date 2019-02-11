@@ -1,0 +1,59 @@
+{% extends "mymovies/index.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+    <div class="indiv_movie_details">
+        <img class="main_movie_image_details" src={{movie.Poster}} alt={{movie.Title}}>
+        <section>
+            <p class="main_movie_title_details">{{ movie.Title }}</p>
+            {% if movie.Rated in "R" %}
+            <img class="rating_icon_details" src="{% static 'mymovies/r.png' %}" alt="Rated R">
+            {% elif movie.Rated in "PG" %}
+            <img class="rating_icon_details" src="{% static 'mymovies/pg.png' %}" alt="Rated PG">
+            {% elif movie.Rated in "PG-13" %}
+            <img class="rating_icon_details" src="{% static 'mymovies/pg13.png' %}" alt="Rated PG-13">
+            {% else %}
+            <p class="main_movie_detail_details">Rating Not Available</p>
+            {% endif %}
+            <p class="main_movie_description_details">{{movie.Plot}}</p>
+            <p class="main_movie_detail_details">Genre: {{movie.Genre}}</p>
+            <p class="main_movie_detail_details">Runtime: {{movie.Runtime}}</p>
+            <p class="main_movie_detail_details">Director(s): {{movie.Director}}</p>
+            <p class="main_movie_detail_details">Actors: {{movie.Actors}}</p>
+            <p class="main_movie_detail_details">Awards: {{movie.Awards}}</p>
+            <p class="main_movie_detail_details">Released: {{movie.Released}}</p>
+            {% if movie.rottenRating >= "85%" %}
+            <p class="movie_rating_good_details"><img class="rotten_score_details" src="{% static 'mymovies/rotten.png' %}"
+                    alt="Rotten Tomatoe Rank"> {{movie.rottenRating}}</p>
+            {% elif movie.rottenRating > "50%" %}
+            <p class="movie_rating_ok_details"><img class="rotten_score_details" src="{% static 'mymovies/rotten.png' %}"
+                    alt="Rotten Tomatoe Rank"> {{movie.rottenRating}}</p>
+            {% else %}
+            <p class="movie_rating_bad_details"><img class="rotten_score_details" src="{% static 'mymovies/rotten.png' %}"
+                    alt="Rotten Tomatoe Rank"> {{movie.rottenRating}}</p>
+            {% endif %}
+            {% if movie.imdbRating >= "7.0/10" %}
+            <p class="movie_rating_good_details"><img class="rotten_score_details" src="{% static 'mymovies/imdb.png' %}"
+                    alt="IMDB Rank"> {{movie.imdbRating}}</p>
+            {% elif movie.imdbRating > "6.0/10" %}
+            <p class="movie_rating_ok_details"><img class="rotten_score_details" src="{% static 'mymovies/imdb.png' %}" alt="IMDB Rank">
+                {{movie.imdbRating}}</p>
+            {% else %}
+            <p class="movie_rating_bad_details"><img class="rotten_score_details" src="{% static 'mymovies/imdb.png' %}"
+                    alt="IMDB Rank"> {{movie.imdbRating}}</p>
+            {% endif %}
+            {% if movie.criticRating > "80/100" %}
+            <p class="movie_rating_good_details"><img class="rotten_score_details" src="{% static 'mymovies/metacritic.png' %}"
+                    alt="MetaCritic Rank"> {{movie.criticRating}}</p>
+            {% elif movie.criticRating > "50/100" %}
+            <p class="movie_rating_ok_details"><img class="rotten_score_details" src="{% static 'mymovies/metacritic.png' %}"
+                    alt="MetaCritic Rank"> {{movie.criticRating}}</p>
+            {% else %}
+            <p class="movie_rating_bad_details"><img class="rotten_score_details" src="{% static 'mymovies/metacritic.png' %}"
+                    alt="MetaCritic Rank"> {{movie.criticRating}}</p>
+            {% endif %}
+        </section>
+    </div>
+
+{% endblock content %}

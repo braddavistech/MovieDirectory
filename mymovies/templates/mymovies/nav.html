@@ -1,0 +1,15 @@
+{% load staticfiles %}
+
+<!-- Basic block for navbar -->
+{% block nav %}
+
+    <section class="navbar">
+            <a class="nav_link" href="{% url 'mymovies:index' %}">Top 10 Movies</a>
+
+            <a class="nav_link" href="{% url 'mymovies:search_movies' %}">Search My Movies</a>
+
+            <a class="nav_link" href="{% url 'mymovies:add_movie' %}">Add Movie</a>
+
+    </section>
+
+{% endblock %}

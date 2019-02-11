@@ -1,0 +1,493 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-image: url("background.png");
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);
+    background-color: black;
+    background-attachment: fixed;
+  }
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: black;
+}
+
+.nav_link {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.nav_link:hover {
+    color: blue;
+}
+
+.user_welcome {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 50px;
+    color: white;
+}
+
+.rotten_score {
+    max-width: 30%;
+}
+
+.movie_list {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.indiv_movie {
+    max-width: 300px;
+    min-width: 250px;
+    margin-bottom: 15px;
+    border: 2px solid white;
+    border-radius: 25px;
+    padding: 2px;
+    padding-top: 15px;
+    padding-bottom: 40px;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.indiv_movie_details {
+    padding: 2px;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+}
+
+.indiv_movie_details > section {
+    width: calc(50% - 2px);
+    padding: 5px;
+}
+
+.rotten_score_details {
+    max-width: 30%;
+}
+
+.main_movie_image_details {
+    width: calc(50% - 50px);
+    height: 100%;
+    display: flex;
+    margin: auto;
+}
+
+.main_movie_title_details {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 50px;
+    color: white;
+}
+
+.main_movie_description_details {
+    text-align: center;
+    color: white;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.main_movie_detail_details {
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.rating_icon_details {
+    max-height: 30px;
+    display: block;
+    margin: auto;
+}
+
+.movie_rating_section_details {
+    margin-top: 10px;
+    display: flex;
+}
+
+.movie_rating_good_details {
+    text-align: center;
+    color: #44f544;;
+    font-weight: bolder;
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 49%;
+}
+
+.movie_rating_ok_details {
+    text-align: center;
+    color: yellow;
+    font-weight: bolder;
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 49%;
+}
+
+.movie_rating_bad_details {
+    text-align: center;
+    color: #ff1e1e;
+    font-weight: bolder;
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 49%;
+}
+
+.movie_details_link {
+    text-decoration: none;
+}
+
+.main_movie_image {
+    width: 60%;
+    height: 75%;
+    display: flex;
+    margin: auto;
+}
+
+.main_movie_title {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 20px;
+    color: white;
+}
+
+.main_movie_description {
+    text-align: center;
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.main_movie_detail {
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.rating_icon {
+    max-height: 30px;
+    display: block;
+    margin: auto;
+}
+
+.movie_rating_section {
+    margin-top: 10px;
+    display: flex;
+}
+
+.movie_rating_good {
+    text-align: center;
+    color: #44f544;;
+    font-weight: bolder;
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 49%;
+}
+
+.movie_rating_ok {
+    text-align: center;
+    color: yellow;
+    font-weight: bolder;
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 49%;
+}
+
+.movie_rating_bad {
+    text-align: center;
+    color: #ff1e1e;
+    font-weight: bolder;
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 49%;
+}
+
+.ratings_name {
+
+}
+
+#main_form_container {
+
+}
+
+.add_title_main {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.add_training_form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+}
+
+.add_training_form > label {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+}
+
+.add_training_form > input {
+    margin-top: 10px;
+    background-color: lightgray;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.add_movie_btn {
+    width: 30%;
+    margin: auto;
+    font-size: 25px !important;
+    border: 3px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+}
+
+.add_movie_btn:hover {
+    background-color: darkslategray;
+    border: 3px solid lightgray;
+}
+
+.check_movie_main {
+    text-align: center;
+    color: white;
+}
+
+.main_form {
+    display: flex;
+}
+
+.movie_full_image {
+    display: flex;
+    margin-left: 5%;
+    width: 30%;
+    max-height: 80vh;
+}
+
+.check_movie_form {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    width: 55%;
+    padding-left: 5%;
+}
+
+.check_movie_form > label {
+    color: white;
+    font-weight: bolder;
+}
+
+#id_Title {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: 40%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#id_Year {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: 40%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#id_Rated {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: 40%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#id_Released {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: 40%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#id_Runtime {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: 40%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#id_Genre {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#id_Director {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#id_Actors {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#id_Plot {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#id_Language {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#id_Country {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#id_Awards {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#id_Poster {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#id_rottenRating {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: 30%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#id_imdbRating {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: 30%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#id_criticRating {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: 30%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#id_imdbID {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: 30%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#id_Type {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: 30%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#id_DVD {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: 30%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.home_link {
+    width: 30%;
+    margin: auto;
+    font-size: 25px !important;
+    border: 3px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+}
+
+.home_link:hover {
+    background-color: darkslategray;
+    border: 3px solid lightgray;
+}

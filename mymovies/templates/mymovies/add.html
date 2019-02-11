@@ -1,0 +1,12 @@
+{% extends "mymovies/index.html" %}
+
+{% block content %}
+
+  <h1 class="add_title_main">Add New Movie to Database</h1>
+  <form class="add_training_form" action="{% url 'mymovies:get_movies' %}" method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <input class="add_movie_btn" type="submit" value="Get Movie Details">
+  </form>
+
+{% endblock content %}
