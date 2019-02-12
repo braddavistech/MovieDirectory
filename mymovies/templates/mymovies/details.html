@@ -53,8 +53,8 @@
             <p class="movie_rating_bad_details"><img class="rotten_score_details" src="{% static 'mymovies/metacritic.png' %}"
                     alt="MetaCritic Rank"> {{movie.criticRating}}</p>
             {% endif %}
-            <a class="movie_details_link" href="{% url 'mymovies:edit_movies' movie.imdbID %}">Edit Details</a>
-            <a class="movie_details_link" href="{% url 'mymovies:delete_movies' movie.imdbID %}">Delete Movie</a>
+            <a class="movie_edit_link" href="{% url 'mymovies:edit_movies' movie.imdbID %}">Edit Details</a>
+            <a class="movie_edit_link" href="{% url 'mymovies:delete_movies' movie.imdbID %}">Delete Movie</a>
         </section>
     </div>
 

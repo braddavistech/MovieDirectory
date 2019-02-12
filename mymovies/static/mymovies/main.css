@@ -57,14 +57,14 @@ body {
     border-radius: 25px;
     padding: 2px;
     padding-top: 15px;
-    padding-bottom: 40px;
+    padding-bottom: 50px;
     background-color: rgba(0,0,0,0.7);
 }
 
 .indiv_movie_details {
     padding: 2px;
-    padding-top: 15px;
-    padding-bottom: 25px;
+    padding-top: 25px;
+    padding-bottom: 20%;
     background-color: rgba(0,0,0,0.7);
     display: flex;
 }
@@ -79,8 +79,7 @@ body {
 }
 
 .main_movie_image_details {
-    width: calc(50% - 50px);
-    height: 100%;
+    width: calc(37% - 50px);
     display: flex;
     margin: auto;
 }
@@ -126,7 +125,7 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 49%;
+    width: 31%;
 }
 
 .movie_rating_ok_details {
@@ -137,7 +136,7 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 49%;
+    width: 31%;
 }
 
 .movie_rating_bad_details {
@@ -148,11 +147,30 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 49%;
+    width: 31%;
 }
 
 .movie_details_link {
     text-decoration: none;
+}
+
+.movie_edit_link {
+    text-decoration: none;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+.movie_edit_link:hover {
+    background-color: black;
+    color: white;
 }
 
 .main_movie_image {
@@ -245,8 +263,18 @@ body {
     flex-direction: column;
     width: 90%;
     margin: auto;
+<<<<<<< HEAD
+<<<<<<< HEAD
+    padding-top: 10%;
+    padding-bottom: 40%;
+=======
     padding-top: 3vw;
     padding-bottom: 72vw;
+>>>>>>> master
+=======
+    padding-top: 3vw;
+    padding-bottom: 72vw;
+>>>>>>> master
 }
 
 .add_training_form > label {
@@ -288,16 +316,41 @@ body {
 
 .main_form {
     display: flex;
+<<<<<<< HEAD
+<<<<<<< HEAD
+    padding-top: 5%;
+    padding-bottom: 14%;
+=======
     background-color: rgba(0,0,0,.5);
     padding-top: 10vw;
     padding-bottom: 20vw;
+>>>>>>> master
+=======
+    background-color: rgba(0,0,0,.5);
+    padding-top: 10vw;
+    padding-bottom: 20vw;
+>>>>>>> master
 }
 
 .movie_full_image {
     display: flex;
     margin-left: 5%;
+<<<<<<< HEAD
+<<<<<<< HEAD
+    width: 27%;
+    height: 40%;
+=======
+=======
+>>>>>>> master
     max-width: 30%;
     max-height: 80vh;
+>>>>>>> master
+}
+
+.filter_type {
+    color: white;
+    text-align: center;
+    font-size: 35px;
 }
 
 .filter_type {

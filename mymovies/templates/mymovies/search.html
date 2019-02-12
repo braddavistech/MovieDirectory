@@ -7,44 +7,54 @@
 <h3 class="filter_type">Filtered by {{filterType}}</h3>
 <div class="movie_list">
     {% for movie in movies %}
-    <div class="indiv_movie">
-        <a class="movie_details_link" href="{% url 'mymovies:details' movie.imdbID%}">
-        <img class="main_movie_image" src={{movie.Poster}} alt={{movie.Title}}>
-        <p class="main_movie_title">{{ movie.Title }}</p>
-        {% if movie.Rated in "R" %}
+    <a class="movie_details_link" href="{% url 'mymovies:details' movie.imdbID%}">
+        <div class="indiv_movie">
+            <img class="main_movie_image" src={{movie.Poster}} alt={{movie.Title}}>
+            <p class="main_movie_title">{{ movie.Title }}</p>
+            {% if movie.Rated in "R" %}
             <img class="rating_icon" src="{% static 'mymovies/r.png' %}" alt="Rated R">
-        {% elif movie.Rated in "PG" %}
-        <img class="rating_icon" src="{% static 'mymovies/pg.png' %}" alt="Rated PG">
-        {% elif movie.Rated in "PG-13" %}
-        <img class="rating_icon" src="{% static 'mymovies/pg13.png' %}" alt="Rated PG-13">
-        {% else %}
+            {% elif movie.Rated in "PG" %}
+            <img class="rating_icon" src="{% static 'mymovies/pg.png' %}" alt="Rated PG">
+            {% elif movie.Rated in "PG-13" %}
+            <img class="rating_icon" src="{% static 'mymovies/pg13.png' %}" alt="Rated PG-13">
+            {% else %}
             <p class="main_movie_detail">Rating Not Available</p>
-        {% endif %}
-        <section class="movie_rating_section">
-            {% if movie.rottenRating >= "85%" %}
-            <p class="movie_rating_good"><img class="rotten_score" src="{% static 'mymovies/rotten.png' %}"
-                    alt="Rotten Tomatoe Rank"> {{movie.rottenRating}}</p>
-            {% elif movie.rottenRating > "50%" %}
-            <p class="movie_rating_ok"><img class="rotten_score" src="{% static 'mymovies/rotten.png' %}"
-                    alt="Rotten Tomatoe Rank"> {{movie.rottenRating}}</p>
-            {% else %}
-            <p class="movie_rating_bad"><img class="rotten_score" src="{% static 'mymovies/rotten.png' %}"
-                    alt="Rotten Tomatoe Rank"> {{movie.rottenRating}}</p>
             {% endif %}
-            {% if movie.imdbRating >= "7.0/10" %}
-            <p class="movie_rating_good"><img class="rotten_score" src="{% static 'mymovies/imdb.png' %}"
-                    alt="IMDB Rank"> {{movie.imdbRating}}</p>
-            {% elif movie.imdbRating > "6.0/10" %}
-            <p class="movie_rating_ok"><img class="rotten_score" src="{% static 'mymovies/imdb.png' %}" alt="IMDB Rank">
-                {{movie.imdbRating}}</p>
-            {% else %}
-            <p class="movie_rating_bad"><img class="rotten_score" src="{% static 'mymovies/imdb.png' %}"
-                    alt="IMDB Rank"> {{movie.imdbRating}}</p>
-            {% endif %}
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <section class="movie_rating_section">
+                {% if movie.rottenRating >= "85%" %}
+                <p class="movie_rating_good"><img class="rotten_score" src="{% static 'mymovies/rotten.png' %}"
+                        alt="Rotten Tomatoe Rank"> {{movie.rottenRating}}</p>
+                {% elif movie.rottenRating > "50%" %}
+                <p class="movie_rating_ok"><img class="rotten_score" src="{% static 'mymovies/rotten.png' %}"
+                        alt="Rotten Tomatoe Rank"> {{movie.rottenRating}}</p>
+                {% else %}
+                <p class="movie_rating_bad"><img class="rotten_score" src="{% static 'mymovies/rotten.png' %}"
+                        alt="Rotten Tomatoe Rank"> {{movie.rottenRating}}</p>
+                {% endif %}
+                {% if movie.imdbRating >= "7.0/10" %}
+                <p class="movie_rating_good"><img class="rotten_score" src="{% static 'mymovies/imdb.png' %}"
+                        alt="IMDB Rank"> {{movie.imdbRating}}</p>
+                {% elif movie.imdbRating > "6.0/10" %}
+                <p class="movie_rating_ok"><img class="rotten_score" src="{% static 'mymovies/imdb.png' %}"
+                        alt="IMDB Rank">
+                    {{movie.imdbRating}}</p>
+                {% else %}
+                <p class="movie_rating_bad"><img class="rotten_score" src="{% static 'mymovies/imdb.png' %}"
+                        alt="IMDB Rank"> {{movie.imdbRating}}</p>
+                {% endif %}
+            </section>
+        </div>
+    </a>
+=======
+=======
+>>>>>>> master
         </a>
         <a class="movie_details_link" href="{% url 'mymovies:details' movie.imdbID%}"></a>
         </section>
     </div>
+>>>>>>> master
     {% endfor %}
 </div>
 
