@@ -5,10 +5,10 @@
 <h1 class="check_movie_main">Edit Movie Information</h1>
 <div class="main_form">
     <img class="movie_full_image" src={{poster}} alt="New Movie">
-    <form class="check_movie_form" action="{% url 'mymovies:save_edits' imdbId%}" method="POST">
+    <form class="check_movie_form" action="{% url 'mymovies:save_edits' imdbID%}" method="POST">
         {% csrf_token %}
         {{ form }}
-        <input class="add_movie_btn" type="submit" value="Add Movie">
+        <input class="add_movie_btn" type="submit" value="Save Movie Edits">
         <a class="home_link" href="{% url 'mymovies:index' %}">Cancel</a>
     </form>
 
