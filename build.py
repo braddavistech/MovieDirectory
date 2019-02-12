@@ -1,7 +1,11 @@
 # import sqlite3
 
 
+<<<<<<< HEAD
 # conn = sqlite3.connect('db.sqlite3')
+=======
+# conn = sqlite3.connect('movies.sqlite3')
+>>>>>>> master
 # c = conn.cursor()
 
 
