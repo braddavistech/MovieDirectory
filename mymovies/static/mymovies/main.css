@@ -264,8 +264,13 @@ body {
     width: 90%;
     margin: auto;
 <<<<<<< HEAD
+<<<<<<< HEAD
     padding-top: 10%;
     padding-bottom: 40%;
+=======
+    padding-top: 3vw;
+    padding-bottom: 72vw;
+>>>>>>> master
 =======
     padding-top: 3vw;
     padding-bottom: 72vw;
@@ -312,8 +317,14 @@ body {
 .main_form {
     display: flex;
 <<<<<<< HEAD
+<<<<<<< HEAD
     padding-top: 5%;
     padding-bottom: 14%;
+=======
+    background-color: rgba(0,0,0,.5);
+    padding-top: 10vw;
+    padding-bottom: 20vw;
+>>>>>>> master
 =======
     background-color: rgba(0,0,0,.5);
     padding-top: 10vw;
@@ -325,12 +336,21 @@ body {
     display: flex;
     margin-left: 5%;
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 27%;
     height: 40%;
 =======
+=======
+>>>>>>> master
     max-width: 30%;
     max-height: 80vh;
 >>>>>>> master
+}
+
+.filter_type {
+    color: white;
+    text-align: center;
+    font-size: 35px;
 }
 
 .filter_type {

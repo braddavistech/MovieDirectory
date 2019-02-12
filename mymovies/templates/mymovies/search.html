@@ -7,19 +7,11 @@
 <h3 class="filter_type">Filtered by {{filterType}}</h3>
 <div class="movie_list">
     {% for movie in movies %}
-<<<<<<< HEAD
     <a class="movie_details_link" href="{% url 'mymovies:details' movie.imdbID%}">
         <div class="indiv_movie">
             <img class="main_movie_image" src={{movie.Poster}} alt={{movie.Title}}>
             <p class="main_movie_title">{{ movie.Title }}</p>
             {% if movie.Rated in "R" %}
-=======
-    <div class="indiv_movie">
-        <a class="movie_details_link" href="{% url 'mymovies:details' movie.imdbID%}">
-        <img class="main_movie_image" src={{movie.Poster}} alt={{movie.Title}}>
-        <p class="main_movie_title">{{ movie.Title }}</p>
-        {% if movie.Rated in "R" %}
->>>>>>> master
             <img class="rating_icon" src="{% static 'mymovies/r.png' %}" alt="Rated R">
             {% elif movie.Rated in "PG" %}
             <img class="rating_icon" src="{% static 'mymovies/pg.png' %}" alt="Rated PG">
@@ -28,6 +20,7 @@
             {% else %}
             <p class="main_movie_detail">Rating Not Available</p>
             {% endif %}
+<<<<<<< HEAD
 <<<<<<< HEAD
             <section class="movie_rating_section">
                 {% if movie.rottenRating >= "85%" %}
@@ -55,6 +48,8 @@
         </div>
     </a>
 =======
+=======
+>>>>>>> master
         </a>
         <a class="movie_details_link" href="{% url 'mymovies:details' movie.imdbID%}"></a>
         </section>
